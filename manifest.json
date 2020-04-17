@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Social Media Direct Access",
+  "description": "Chrome Social Media Direct Access Extension",
+  "version": "0.1.0",
+
+  "icons": { "128": "social.png" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["background.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "social.png",
+    "default_popup": "./hoverContent/hover.html"
+  },
+  "permissions": ["activeTab", "storage"]
+}
